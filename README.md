@@ -221,9 +221,8 @@ The Power BI dashboard was developed to provide interactive business insights.
 
 Add your dashboard screenshot here:
 
-![Dashboard](Screenshots/dashboard..png)
+![Dashboard](Screenshots/dashboard.png)
 
----
 
 ## Streamlit Application
 
