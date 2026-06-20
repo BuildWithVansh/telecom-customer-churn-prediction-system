@@ -222,7 +222,7 @@ The Power BI dashboard was developed to provide interactive business insights.
 Add your dashboard screenshot here:
 
 ```markdown
-![Dashboard](dashboard.png)
+![Dashboard](Screenshots/dashboard.png)
 ```
 
 ---
