@@ -219,7 +219,6 @@ The Power BI dashboard was developed to provide interactive business insights.
 
 ### Dashboard Preview
 
-Add your dashboard screenshot here:
 
 ![Dashboard](Screenshots/dashboard.png)
 
