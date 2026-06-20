@@ -221,9 +221,7 @@ The Power BI dashboard was developed to provide interactive business insights.
 
 Add your dashboard screenshot here:
 
-```markdown
 ![Dashboard](Screenshots/dashboard.png)
-```
 
 ---
 
@@ -241,14 +239,13 @@ A Streamlit web application was developed for real-time churn prediction.
 
 ### Application Screenshots
 
-```markdown
+
 ![App](Screenshots/streamlit_app_1.png)
 
 ![App](Screenshots/streamlit_app_2.png)
 
 ![App](Screenshots/streamlit_app_3.png)
 
-```
 
 ---
 
