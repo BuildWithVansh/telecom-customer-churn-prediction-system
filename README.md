@@ -1,137 +1,153 @@
-# 📊 Telecom Customer Churn Prediction & Business Intelligence System
+# 📊 Telecom Customer Churn Prediction System
 
-An End-to-End Data Analytics and Machine Learning Project built using **Python, SQL, XGBoost, Power BI, and Streamlit** to predict customer churn, analyze business trends, and generate actionable insights for customer retention.
-
----
-
-## 🚀 Project Overview
-
-Customer churn is one of the most critical business challenges in the telecom industry. This project helps identify customers who are likely to leave the company and provides business insights through data analysis, machine learning, and interactive dashboards.
-
-### Objectives
-
-- Predict customer churn using Machine Learning.
-- Analyze churn behavior using SQL.
-- Build interactive Power BI dashboards.
-- Generate business insights and recommendations.
-- Deploy a real-time prediction application using Streamlit.
+An end-to-end Data Analytics and Machine Learning project designed to identify telecom customers who are likely to churn. The project combines data analysis, SQL-based business insights, predictive modeling using XGBoost, an interactive Power BI dashboard, and a deployed Streamlit application for real-time predictions.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Live Demo
 
-### Programming & Analysis
-- Python
-- Pandas
-- NumPy
+**Streamlit Application**
+https://telecom-customer-churn-prediction-system-dz29tru4afjkcp4mw3hqv.streamlit.app/
 
-### Machine Learning
-- Scikit-Learn
-- XGBoost
-- GridSearchCV
+**GitHub Repository**
+https://github.com/BuildWithVansh/telecom-customer-churn-prediction-system
 
-### Database & Querying
-- SQL
-- PostgreSQL
+---
+
+## 📌 Business Problem
+
+Customer churn is a major challenge in the telecom industry because acquiring new customers is significantly more expensive than retaining existing ones.
+
+The objective of this project is to:
+
+* Identify customers at risk of churning.
+* Understand key factors driving churn.
+* Generate business insights for customer retention.
+* Build a predictive model that supports data-driven decision making.
+
+---
+
+## 🛠️ Technologies Used
+
+### Data Analysis
+
+* Python
+* Pandas
+* NumPy
 
 ### Data Visualization
-- Power BI
-- Matplotlib
-- Seaborn
+
+* Power BI
+* Matplotlib
+* Seaborn
+
+### Machine Learning
+
+* Scikit-Learn
+* XGBoost
+* GridSearchCV
+
+### Database
+
+* SQL
 
 ### Deployment
-- Streamlit
+
+* Streamlit Cloud
 
 ### Version Control
-- Git & GitHub
+
+* Git & GitHub
 
 ---
 
-## 📂 Dataset Information
+## 📂 Dataset
 
 **Dataset:** Telco Customer Churn Dataset
 
-**Total Records:** 7,043 Customers
+**Total Customers:** 7,043
 
-### Features
+### Key Features
 
-#### Customer Information
-- gender
-- SeniorCitizen
-- Partner
-- Dependents
+**Customer Information**
 
-#### Service Information
-- PhoneService
-- MultipleLines
-- InternetService
-- OnlineSecurity
-- OnlineBackup
-- DeviceProtection
-- TechSupport
-- StreamingTV
-- StreamingMovies
+* Gender
+* Senior Citizen
+* Partner
+* Dependents
 
-#### Account Information
-- tenure
-- Contract
-- PaperlessBilling
-- PaymentMethod
-- MonthlyCharges
-- TotalCharges
+**Service Information**
 
-#### Target Variable
-- Churn
+* Phone Service
+* Multiple Lines
+* Internet Service
+* Online Security
+* Online Backup
+* Device Protection
+* Tech Support
+* Streaming TV
+* Streaming Movies
+
+**Account Information**
+
+* Tenure
+* Contract Type
+* Paperless Billing
+* Payment Method
+* Monthly Charges
+* Total Charges
+
+**Target Variable**
+
+* Churn
 
 ---
 
 ## 🔄 Project Workflow
 
-```text
 Data Collection
-      ↓
-Data Cleaning
-      ↓
+⬇
+Data Cleaning & Preprocessing
+⬇
 Exploratory Data Analysis
-      ↓
+⬇
 Feature Engineering
-      ↓
-Data Preprocessing
-      ↓
-Machine Learning Modeling
-      ↓
+⬇
+Model Training
+⬇
 Hyperparameter Tuning
-      ↓
+⬇
 SQL Business Analysis
-      ↓
-Power BI Dashboard
-      ↓
+⬇
+Power BI Dashboard Development
+⬇
 Streamlit Deployment
-```
 
 ---
 
 ## 🧹 Data Preprocessing
 
-The following preprocessing steps were applied:
+The following preprocessing steps were applied before model training:
 
-- Missing Value Handling
-- Data Type Corrections
-- One-Hot Encoding
-- Feature Scaling using StandardScaler
-- ColumnTransformer Pipeline
-- Class Imbalance Handling using scale_pos_weight
-- Train-Test Split
+* Missing value handling
+* Data type correction
+* One-Hot Encoding
+* Feature Scaling using StandardScaler
+* ColumnTransformer Pipeline
+* Class imbalance handling
+* Train-Test Split
 
 ---
 
 ## 🤖 Machine Learning Models
 
-### Baseline Model
-- Logistic Regression
+### Logistic Regression
 
-### Advanced Model
-- XGBoost Classifier
+Used as the baseline model.
+
+### XGBoost Classifier
+
+Used as the final model because it achieved the best overall performance.
 
 ---
 
@@ -155,75 +171,40 @@ n_estimators = 500
 
 ---
 
-## 📈 Model Comparison
+## 📈 Model Performance
 
-| Model | Accuracy | ROC-AUC |
-|---------|---------|---------|
-| Logistic Regression | 74.0% | 84.56% |
-| Tuned XGBoost | 74.3% | 84.91% |
-
-### Final Selected Model
-✅ Tuned XGBoost Classifier
-
----
-
-## 🎯 Final Model Performance
-
-| Metric | Score |
-|----------|----------|
-| Accuracy | 74.3% |
-| Precision | 51% |
-| Recall | 82% |
-| F1 Score | 63% |
-| ROC-AUC | 84.91% |
+| Metric    | Score  |
+| --------- | ------ |
+| Accuracy  | 74.3%  |
+| Precision | 51%    |
+| Recall    | 82%    |
+| F1 Score  | 63%    |
+| ROC-AUC   | 84.91% |
 
 ### Why Recall Matters
 
-Customer churn prediction is an imbalanced classification problem.
+In churn prediction, identifying customers who are likely to leave is more important than maximizing accuracy alone.
 
-The final model achieved:
-
-```text
-Recall = 82%
-```
-
-Meaning the model successfully identifies **82% of customers likely to churn**, helping businesses proactively retain customers.
-
----
-
-## 🗄️ SQL Business Analysis
-
-Business analysis was performed using SQL to identify customer behavior patterns and churn drivers.
-
-### Key SQL Analyses
-
-- Overall Churn Rate Analysis
-- Churn by Contract Type
-- Churn by Payment Method
-- Churn by Internet Service
-- Revenue Analysis
-- Customer Segmentation
-- High-Risk Customer Identification
+The model achieved a recall of **82%**, meaning it successfully identified most customers who were at risk of churning.
 
 ---
 
 ## 📊 Power BI Dashboard
 
-An interactive Power BI dashboard was developed to visualize customer behavior and churn trends.
+An interactive Power BI dashboard was created to explore churn trends and customer behavior.
 
 ### Dashboard Features
 
-- Total Customers KPI
-- Churned Customers KPI
-- Churn Rate KPI
-- Retention Rate KPI
-- Revenue Analysis
-- Churn Distribution
-- Contract Analysis
-- Payment Method Analysis
-- Internet Service Analysis
-- Tenure Analysis
-- Dynamic Filters
+* Total Customers
+* Churned Customers
+* Churn Rate
+* Retention Rate
+* Revenue Analysis
+* Contract Analysis
+* Payment Method Analysis
+* Internet Service Analysis
+* Tenure Analysis
+* Dynamic Filtering
 
 ### Dashboard Preview
 
@@ -231,17 +212,18 @@ An interactive Power BI dashboard was developed to visualize customer behavior a
 
 ---
 
-## 💻 Streamlit Web Application
+## 💻 Streamlit Application
 
-A Streamlit application was developed for real-time customer churn prediction.
+A web application was developed to make predictions in real time.
 
 ### Features
 
-- User-Friendly Interface
-- Customer Data Input Form
-- Real-Time Prediction
-- Churn Probability Estimation
-- Business-Friendly Output
+* Customer Information Form
+* Churn Prediction
+* Churn Probability Estimation
+* Risk Classification
+* Business Recommendations
+* Interactive User Interface
 
 ### Application Screenshots
 
@@ -259,34 +241,53 @@ A Streamlit application was developed for real-time customer churn prediction.
 
 ---
 
+## 🗄️ SQL Analysis
+
+SQL was used to perform business-focused analysis on customer churn patterns.
+
+### Analyses Performed
+
+* Churn Rate Analysis
+* Contract Type Analysis
+* Payment Method Analysis
+* Revenue Analysis
+* Customer Segmentation
+* High-Risk Customer Identification
+
+---
+
 ## 🔍 Key Business Insights
 
-- Overall Churn Rate: 26.54%
-- Retention Rate: 73.46%
-- Month-to-Month customers have the highest churn.
-- Electronic Check users show the highest churn.
-- Fiber Optic customers churn more frequently than DSL customers.
-- Long-term contracts significantly improve customer retention.
-- High-risk customers were successfully identified using machine learning.
+* Overall churn rate is 26.54%.
+* Month-to-month contracts have the highest churn rate.
+* Electronic Check customers churn more frequently than other payment groups.
+* Fiber Optic users show higher churn behavior.
+* Customers with shorter tenure are more likely to leave.
+* Long-term contracts improve customer retention significantly.
 
 ---
 
 ## 💡 Business Recommendations
 
-### Contract Strategy
-- Encourage customers to switch from Month-to-Month plans to long-term contracts.
+### Improve Contract Retention
 
-### Customer Retention
-- Create targeted retention campaigns for high-risk customers.
+Encourage customers to move from month-to-month plans to long-term contracts.
 
-### Service Improvement
-- Improve customer experience for Fiber Optic users.
+### Target High-Risk Customers
 
-### Payment Strategy
-- Provide incentives for customers using Electronic Check payment methods.
+Use churn predictions to launch personalized retention campaigns.
+
+### Enhance Customer Experience
+
+Investigate service quality concerns among Fiber Optic customers.
+
+### Payment Strategy Optimization
+
+Offer incentives to customers using Electronic Check payment methods.
 
 ### Loyalty Programs
-- Offer rewards and discounts for long-term customers.
+
+Reward long-term customers through discounts and loyalty benefits.
 
 ---
 
@@ -296,26 +297,11 @@ A Streamlit application was developed for real-time customer churn prediction.
 telecom-customer-churn-prediction-system/
 
 ├── Dashboard/
-│   └── Telecome_Customer_churn_Dashboard.pbix
-
 ├── Data/
-│   └── Telco-Customer-Churn.csv
-
 ├── Model/
-│   └── best_xgb_model.pkl
-
 ├── Notebooks/
-│   └── churn_prediction.ipynb
-
 ├── SQL/
-│   └── churn_analysis.sql
-
 ├── Screenshots/
-│   ├── dashboard.png
-│   ├── streamlit_app_1.png
-│   ├── streamlit_app_2.png
-│   └── streamlit_app_3.png
-
 ├── app.py
 ├── requirements.txt
 └── README.md
@@ -325,11 +311,12 @@ telecom-customer-churn-prediction-system/
 
 ## 🔮 Future Improvements
 
-- Cloud Deployment
-- Real-Time Prediction API
-- Automated Model Retraining
-- Customer Segmentation Module
-- Advanced Ensemble Learning Models
+* SHAP Explainability
+* Feature Importance Dashboard
+* Customer Segmentation
+* Automated Retention Recommendation Engine
+* API Integration
+* Model Monitoring
 
 ---
 
@@ -339,32 +326,14 @@ telecom-customer-churn-prediction-system/
 
 B.Tech (Electronics & Communication Engineering)
 
-Aspiring Data Analyst | Data Scientist | Machine Learning Enthusiast
+Aspiring Data Analyst | Machine Learning Enthusiast
 
-GitHub: https://github.com/BuildWithVansh
+GitHub:
+https://github.com/BuildWithVansh
 
-LinkedIn: Add Your LinkedIn Profile Here
-
----
-
-## ⭐ Project Highlights
-
-✅ End-to-End Data Analytics Project
-
-✅ SQL-Based Business Analysis
-
-✅ Machine Learning Prediction System
-
-✅ Hyperparameter-Tuned XGBoost Model
-
-✅ 84.91% ROC-AUC Score
-
-✅ Interactive Power BI Dashboard
-
-✅ Streamlit Deployment
-
-✅ Real-World Telecom Business Use Case
+LinkedIn:
+https://www.linkedin.com/in/vansh-gupta-b80456276
 
 ---
 
-### If you found this project useful, don't forget to ⭐ the repository.
+⭐ If you found this project useful, consider giving the repository a star.
