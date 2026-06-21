@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load Model
-model = joblib.load("best_xgb_model.pkl")
+model = joblib.load("Model/best_xgb_model.pkl")
 
 st.title("📊 Customer Churn Prediction")
 
